@@ -1,0 +1,115 @@
+
+/*@import "reset.css";
+/*HTML Reset above. helps with browser compatibility*/
+/* MY CODE BElOW*/
+
+
+
+	:root 
+	{
+    --pageTop: 50px; 
+    --sPadding: 2px;
+    --sBorder:1px;
+    --sMargin:1px;
+    --sBackColor: rgb(45,45,40);
+    --sColor: rgb(250,250,180);
+    --brightColor: rgb(250,250,0);
+    --backColorLight: rgb(55,55,55);
+    --backColorDark: rgb(30,30,30);
+	}	
+	body
+	{
+		background-color:var(--sBackColor);
+		margin: 0;
+		color: var(--sColor);
+		font-family: arial;
+	}
+	.container
+	{	
+		text-align: center;
+		height: 100%;
+	}
+	.container>*
+	{	
+		display: inline-block;
+		height: 100%;	
+		align-items: center;
+	}
+
+	.navItem
+	{
+		height:100%;
+		padding-right: calc(2 * var(--sPadding));
+		padding-left: var(--sPadding);
+		margin-right: calc(2 * var(--sPadding));
+		margin-left: calc(2 * var(--sPadding));
+		vertical-align: middle;
+	}
+	.navItem > a
+	{
+		color: var(--brightColor);
+	}
+
+		.navItem > a:active
+	{
+		color: var(--brightColor);
+	}
+
+	.navItem:hover
+	{
+		background-color: var(--backColorLight);
+	}
+
+	.child
+	{
+
+	}
+
+	.topnav
+	{	
+		background-color: var(--backColorDark);
+		height:calc(var(--pageTop));/*calc(var(--pageTop) - 2 * var(--standardPadding));*/
+		color: var(--brightColor);
+		font-size: 20px;
+		padding:0;
+
+	}
+
+
+	.r
+	{
+		float: right;
+		margin: 0;
+	}
+
+	.l
+	{
+		float: left;
+		margin: 0;
+	}
+	.content
+	{
+		position: absolute;
+		bottom:0;
+		top:var(--pageTop);
+		width: 100%;
+	}
+	.box
+	{
+		width: calc(100% - 2 * var(--sBorder) - 2 * var(--sPadding) - 2 * var(--sMargin));
+		height: calc(100% - 2 * var(--sBorder) - 2 * var(--sPadding) - 2 * var(--sMargin));
+		border:var(--sBorder) solid rgb(65,65,65);
+		padding: var(--sPadding);
+		margin:var(--sMargin);
+	}
+	.dropdown
+	{
+		background-color: var(--backColorDark);
+		height:100px;
+		width:200px;
+		position:absolute;
+		top:var(--pageTop);
+		right:0;
+		z-index:1;
+	}
+

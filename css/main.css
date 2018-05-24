@@ -68,7 +68,7 @@
 		transition: all 0.2s ease;
 	}
 
-	.menuCtn li:hover
+	.menuCtn > li:hover
 	{
 		cursor: pointer;
 		background-color: var(--backColorLight);
@@ -102,15 +102,12 @@
 	}
 	#dropdown
 	{	
-		/*
 		background-color: var(--backColorDark);
-		height:100px;
 		width:200px;
 		position:absolute;
 		top:var(--pageTop);
 		right:0;
 		z-index:1;
-		*/
 		display: none;
 	}
 

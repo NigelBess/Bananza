@@ -24,6 +24,11 @@
 		color: var(--sColor);
 		font-family: arial;
 	}
+	button
+	{
+		
+	}
+
 	.container
 	{	
 		text-align: center;

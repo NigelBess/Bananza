@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="main.css">
+<link rel="icon" href="banano.ico">
 	<title>Bananza</title>
 </head>
 <body>
@@ -11,10 +12,10 @@
 		<div> </div>
 		<div class="r"> 
 			<div class="container" >
-				<div class="navItem" onclick="loginDropDown()">
+				<button class="navItem" onclick="loginDropDown()">
 					Log In
 
-				</div>
+				</button>
 				<div class="navItem">
 					Sign Up  
 
@@ -47,6 +48,12 @@
 			<div style="height: 50%">
 				<div class="box">
 						Chat box here
+						<?php 
+					function loginDropDown()
+					{
+						echo "hello";
+					}
+					 ?>
 				</div>
 				
 			</div>
@@ -63,12 +70,7 @@
 
 
 
-<?php 
-function loginDropDown()
-{
-	echo "hello";
-}
- ?>
-}
+
+
 </body>
 </html>

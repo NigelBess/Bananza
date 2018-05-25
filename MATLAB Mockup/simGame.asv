@@ -1,0 +1,38 @@
+function expectedValue = simGame()
+    edge = -0.01;
+    numGames = 1000;
+   
+ret = 0;
+guess = 0;
+    eVal = zeros(1,numGames);
+    dm = 0.01;
+   
+   
+    for i = 1:numGames           
+             set;
+             mult = 1;
+             p = (1-edge)/(1.01);
+            r = rand(1);
+            if r>p
+                 eVal(i) = 0;
+            else
+                while r<p
+                        if guess == mult
+                            ret = mult;
+                        else
+                             p = mult/(mult+dm);
+                             r = rand(1);
+                             if r>p
+                                 ret = 0;
+                             end
+                         end
+                end
+                eVal(i) = ret;
+            end
+    end
+    expectedValue = sum(eVal)/numGames;
+    
+    function set()
+         guess = randi([101 1000],1);
+    end
+end

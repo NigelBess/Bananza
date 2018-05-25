@@ -14,9 +14,9 @@
 		<ul class = "menuCtn">
 			<li class = "menu">
 			 	Log in 
-			 	<ul class = "dropdown">
+			 	<ul class = "dropdown" >
 			 		<li>
-			 			<input type="text" name="username" placeholder="Username">
+			 			<input type="text" name="userName" placeholder="Username">
 			 		</li>
 			 		<li>
 			 			<input type="password" name="password" placeholder="Password">
@@ -28,26 +28,27 @@
 			</li>
 			<li class = "menu">
 			 	Sign up
-			 	<ul class = "dropdown">
-			 		<li>
-			 			<input type="text" name="username" placeholder="Username">
-			 		</li>
-			 		<li>
+			 	<form class = "dropdown" action="./includes/signup.php" method="POST">
+			 		<div>
+			 			<input type="text" name="userName" placeholder="Username">
+			 		</div>
+			 		<div>
 			 			<button> Check</button>
-			 		</li>
-			 		<li>
+			 		</div>
+			 		<div>
 			 			<input type="password" name="password" placeholder="Password">
-			 		</li>
-			 		<li>
-			 			<input type="password" name="check" placeholder="Retype Password">
-			 		</li>
-			 		<li>
+			 		</div>
+		 			<div>
+		 				<input type="password" name="check" placeholder="Retype Password">
+		 			</div>
+		 			<div>
+		 				<button type ="submit" name="submit">Submit</button>
+		 			</div>
 			 			
-			 		</li>
-			 		<li>
-			 			<button>Submit</button>
-			 		</li>
-			 	</ul>
+			 			
+			 			
+			 			
+			 	</form>
 			</li>
 		</ul>
 	</nav>

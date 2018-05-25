@@ -11,12 +11,15 @@
     --sPadding: 2px;
     --sBorder:1px;
     --sMargin:1px;
+    --itemHeight:30px;
     --sBackColor: rgb(45,45,40);
     --sColor: rgb(250,250,180);
     --brightColor: rgb(250,250,0);
     --backColorLight: rgb(55,55,55);
     --backColorDark: rgb(30,30,30);
+    --backColorExtraDark: rgb(20,20,20);
     --topNavHeight:50px;
+    --lightGrey:rgb(180,180,180);
 	}	
 
 	*
@@ -38,7 +41,7 @@
 	}
 	nav
 	{	
-		background-color: var(--backColorDark);
+		background-color: var(--backColorExtraDark);
 		display: flex;
 		justify-content: space-between;
 		height: var(--topNavHeight);
@@ -47,6 +50,10 @@
 		padding-left:30px;
 	}
 
+	nav *
+	{
+		color: var(--brightColor);
+	}
 	.menuCtn
 	{	
 		height: 100%;
@@ -76,10 +83,16 @@
 	.topLogo
 	{
 		height:100%;
+
 	}
-	.topLogo img
+
+	.topLogo *
 	{
+		display: inline-block;
 		height: 100%;
+		text-align: center;
+		vertical-align: middle;
+		line-height: var(--topNavHeight);
 	}
 
 	
@@ -100,18 +113,52 @@
 		padding: var(--sPadding);
 		margin:var(--sMargin);
 	}
-	#dropdown
+	.dropdown
 	{	
 		background-color: var(--backColorDark);
-		width:200px;
+		width:300px;
 		position:absolute;
 		top:var(--pageTop);
 		right:0;
 		z-index:1;
 		display: none;
+		padding: 20px;
 	}
 
-	#dropdown.active
+	.dropdown *
+	{
+		vertical-align: middle;
+	}
+	.dropdown.active
 	{
 		display: block;
+	}
+
+	input
+	{
+		background-color: var(--backColorLight);
+		height: 30px;
+		width:200px;
+		text-align: center;
+		color: var(--sColor);
+
+	}
+	::placeholder
+	{	
+		color: var(--lightGrey);
+		opacity: 0.8;
+
+	}
+
+	button
+	{
+		height: var(--itemHeight);
+		width:80px;
+		background-color: var(--backColorExtraDark);
+		color: var(--brightColor);
+	}
+	button:hover
+	{
+		cursor: pointer;
+		background-color: var(--backColorLight);
 	}
